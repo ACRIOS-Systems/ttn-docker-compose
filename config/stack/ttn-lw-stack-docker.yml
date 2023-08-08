@@ -1,13 +1,13 @@
 # Identity Server configuration
-# Email configuration for "thethings.example.com"
+# Email configuration for "ttn.testvps.acrios.com"
 is:
   email:
     sender-name: "The Things Stack"
-    sender-address: "noreply@thethings.example.com"
+    sender-address: "noreply@ttn.testvps.acrios.com"
     network:
       name: "The Things Stack"
-      console-url: "https://thethings.example.com/console"
-      identity-server-url: "https://thethings.example.com/oauth"
+      console-url: "https://ttn.testvps.acrios.com/console"
+      identity-server-url: "https://ttn.testvps.acrios.com/oauth"
 
     # If sending email with Sendgrid
     # provider: sendgrid
@@ -21,12 +21,12 @@ is:
     #   username: '...'             # enter SMTP server username
     #   password: '...'             # enter SMTP server password
 
-  # Web UI configuration for "thethings.example.com":
+  # Web UI configuration for "ttn.testvps.acrios.com":
   oauth:
     ui:
-      canonical-url: "https://thethings.example.com/oauth"
+      canonical-url: "https://ttn.testvps.acrios.com/oauth"
       is:
-        base-url: "https://thethings.example.com/api/v3"
+        base-url: "https://ttn.testvps.acrios.com/api/v3"
 
 # HTTP server configuration
 http:
@@ -48,87 +48,87 @@ http:
 #   certificate: /run/secrets/cert.pem
 #   key: /run/secrets/key.pem
 
-# Let's encrypt for "thethings.example.com"
+# Let's encrypt for "ttn.testvps.acrios.com"
 tls:
   source: "acme"
   acme:
     dir: "/var/lib/acme"
-    email: "you@thethings.example.com"
-    hosts: ["thethings.example.com"]
-    default-host: "thethings.example.com"
+    email: "you@ttn.testvps.acrios.com"
+    hosts: ["ttn.testvps.acrios.com"]
+    default-host: "ttn.testvps.acrios.com"
 
-# If Gateway Server enabled, defaults for "thethings.example.com":
+# If Gateway Server enabled, defaults for "ttn.testvps.acrios.com":
 gs:
   mqtt:
-    public-address: "thethings.example.com:1882"
-    public-tls-address: "thethings.example.com:8882"
+    public-address: "ttn.testvps.acrios.com:1882"
+    public-tls-address: "ttn.testvps.acrios.com:8882"
   mqtt-v2:
-    public-address: "thethings.example.com:1881"
-    public-tls-address: "thethings.example.com:8881"
+    public-address: "ttn.testvps.acrios.com:1881"
+    public-tls-address: "ttn.testvps.acrios.com:8881"
 
-# If Gateway Configuration Server enabled, defaults for "thethings.example.com":
+# If Gateway Configuration Server enabled, defaults for "ttn.testvps.acrios.com":
 gcs:
   basic-station:
     default:
-      lns-uri: "wss://thethings.example.com:8887"
+      lns-uri: "wss://ttn.testvps.acrios.com:8887"
   the-things-gateway:
     default:
-      mqtt-server: "mqtts://thethings.example.com:8881"
+      mqtt-server: "mqtts://ttn.testvps.acrios.com:8881"
 
-# Web UI configuration for "thethings.example.com":
+# Web UI configuration for "ttn.testvps.acrios.com":
 console:
   ui:
-    canonical-url: "https://thethings.example.com/console"
-    account-url: "https://thethings.example.com/console"
+    canonical-url: "https://ttn.testvps.acrios.com/console"
+    account-url: "https://ttn.testvps.acrios.com/console"
     is:
-      base-url: "https://thethings.example.com/api/v3"
+      base-url: "https://ttn.testvps.acrios.com/api/v3"
     gs:
-      base-url: "https://thethings.example.com/api/v3"
+      base-url: "https://ttn.testvps.acrios.com/api/v3"
     gcs:
-      base-url: "https://thethings.example.com/api/v3"
+      base-url: "https://ttn.testvps.acrios.com/api/v3"
     ns:
-      base-url: "https://thethings.example.com/api/v3"
+      base-url: "https://ttn.testvps.acrios.com/api/v3"
     as:
-      base-url: "https://thethings.example.com/api/v3"
+      base-url: "https://ttn.testvps.acrios.com/api/v3"
     js:
-      base-url: "https://thethings.example.com/api/v3"
+      base-url: "https://ttn.testvps.acrios.com/api/v3"
     qrg:
-      base-url: "https://thethings.example.com/api/v3"
+      base-url: "https://ttn.testvps.acrios.com/api/v3"
     edtc:
-      base-url: "https://thethings.example.com/api/v3"
+      base-url: "https://ttn.testvps.acrios.com/api/v3"
     dcs:
-      base-url: "https://thethings.example.com/api/v3"
+      base-url: "https://ttn.testvps.acrios.com/api/v3"
   oauth:
-    authorize-url: "https://thethings.example.com/oauth/authorize"
-    token-url: "https://thethings.example.com/oauth/token"
-    logout-url: "https://thethings.example.com/oauth/logout"
+    authorize-url: "https://ttn.testvps.acrios.com/oauth/authorize"
+    token-url: "https://ttn.testvps.acrios.com/oauth/token"
+    logout-url: "https://ttn.testvps.acrios.com/oauth/logout"
     client-id: "console"
     client-secret: "console" # choose or generate a secret
 
-# If Application Server enabled, defaults for "thethings.example.com":
+# If Application Server enabled, defaults for "ttn.testvps.acrios.com":
 as:
   mqtt:
-    public-address: "thethings.example.com:1883"
-    public-tls-address: "thethings.example.com:8883"
+    public-address: "ttn.testvps.acrios.com:1883"
+    public-tls-address: "ttn.testvps.acrios.com:8883"
   webhooks:
     downlink:
-      public-address: "thethings.example.com:1885/api/v3"
+      public-address: "ttn.testvps.acrios.com:1885/api/v3"
 
-# If Device Claiming Server enabled, defaults for "thethings.example.com":
+# If Device Claiming Server enabled, defaults for "ttn.testvps.acrios.com":
 dcs:
   oauth:
-    authorize-url: "https://thethings.example.com/oauth/authorize"
-    token-url: "https://thethings.example.com/oauth/token"
-    logout-url: "https://thethings.example.com/oauth/logout"
+    authorize-url: "https://ttn.testvps.acrios.com/oauth/authorize"
+    token-url: "https://ttn.testvps.acrios.com/oauth/token"
+    logout-url: "https://ttn.testvps.acrios.com/oauth/logout"
     client-id: "device-claiming"
     client-secret: "device-claiming" # choose or generate a secret
   ui:
-    canonical-url: "https://thethings.example.com/claim"
+    canonical-url: "https://ttn.testvps.acrios.com/claim"
     as:
-      base-url: "https://thethings.example.com/api/v3"
+      base-url: "https://ttn.testvps.acrios.com/api/v3"
     dcs:
-      base-url: "https://thethings.example.com/api/v3"
+      base-url: "https://ttn.testvps.acrios.com/api/v3"
     is:
-      base-url: "https://thethings.example.com/api/v3"
+      base-url: "https://ttn.testvps.acrios.com/api/v3"
     ns:
-      base-url: "https://thethings.example.com/api/v3"
+      base-url: "https://ttn.testvps.acrios.com/api/v3"
